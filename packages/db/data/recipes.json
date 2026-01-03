@@ -1,0 +1,280 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "肉料理",
+      "slug": "meat"
+    },
+    {
+      "id": 2,
+      "name": "鶏肉料理",
+      "slug": "chicken"
+    },
+    {
+      "id": 3,
+      "name": "魚料理",
+      "slug": "fish"
+    },
+    {
+      "id": 4,
+      "name": "野菜料理",
+      "slug": "vegetable"
+    },
+    {
+      "id": 5,
+      "name": "カレー",
+      "slug": "curry"
+    },
+    {
+      "id": 6,
+      "name": "スープ系",
+      "slug": "soup"
+    },
+    {
+      "id": 7,
+      "name": "鍋料理",
+      "slug": "hotpot"
+    },
+    {
+      "id": 8,
+      "name": "スイーツ",
+      "slug": "sweets"
+    },
+    {
+      "id": 9,
+      "name": "その他",
+      "slug": "other"
+    }
+  ],
+  "recipes": [
+    {
+      "code": "01",
+      "title": "豚の角煮",
+      "categoryId": 1,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe01/",
+      "ingredients": [
+        "豚バラ肉",
+        "長ねぎ",
+        "しょうが",
+        "酒",
+        "みりん",
+        "しょうゆ",
+        "砂糖"
+      ]
+    },
+    {
+      "code": "02",
+      "title": "肉じゃが",
+      "categoryId": 1,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe02/",
+      "ingredients": [
+        "牛肉",
+        "じゃがいも",
+        "玉ねぎ",
+        "にんじん",
+        "しらたき",
+        "酒",
+        "みりん",
+        "しょうゆ",
+        "砂糖"
+      ]
+    },
+    {
+      "code": "03",
+      "title": "豚肉と大根の煮物",
+      "categoryId": 1,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe03/",
+      "ingredients": [
+        "豚バラ肉",
+        "大根",
+        "しょうが",
+        "酒",
+        "みりん",
+        "しょうゆ",
+        "砂糖"
+      ]
+    },
+    {
+      "code": "09",
+      "title": "鯖のみそ煮",
+      "categoryId": 3,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe09/",
+      "ingredients": [
+        "鯖",
+        "みそ",
+        "砂糖",
+        "酒",
+        "しょうゆ",
+        "しょうが",
+        "白髪ねぎ"
+      ]
+    },
+    {
+      "code": "15",
+      "title": "筑前煮",
+      "categoryId": 2,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe15/",
+      "ingredients": [
+        "鶏もも肉",
+        "ごぼう",
+        "にんじん",
+        "れんこん",
+        "たけのこ",
+        "こんにゃく",
+        "干ししいたけ",
+        "酒",
+        "砂糖",
+        "しょうゆ",
+        "みりん"
+      ]
+    },
+    {
+      "code": "16",
+      "title": "チキンカレー",
+      "categoryId": 5,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe16/",
+      "ingredients": [
+        "鶏もも肉",
+        "玉ねぎ",
+        "にんじん",
+        "じゃがいも",
+        "カレールー",
+        "水"
+      ]
+    },
+    {
+      "code": "17",
+      "title": "ビーフカレー",
+      "categoryId": 5,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe17/",
+      "ingredients": [
+        "牛肉",
+        "玉ねぎ",
+        "にんじん",
+        "じゃがいも",
+        "カレールー",
+        "水"
+      ]
+    },
+    {
+      "code": "20",
+      "title": "ポトフ",
+      "categoryId": 6,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe20/",
+      "ingredients": [
+        "ソーセージ",
+        "キャベツ",
+        "じゃがいも",
+        "にんじん",
+        "玉ねぎ",
+        "コンソメ",
+        "塩",
+        "こしょう"
+      ]
+    },
+    {
+      "code": "21",
+      "title": "クリームシチュー",
+      "categoryId": 6,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe21/",
+      "ingredients": [
+        "鶏もも肉",
+        "じゃがいも",
+        "にんじん",
+        "玉ねぎ",
+        "シチュールー",
+        "牛乳"
+      ]
+    },
+    {
+      "code": "25",
+      "title": "豚汁",
+      "categoryId": 6,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe25/",
+      "ingredients": [
+        "豚バラ肉",
+        "大根",
+        "にんじん",
+        "ごぼう",
+        "こんにゃく",
+        "豆腐",
+        "みそ",
+        "だし"
+      ]
+    },
+    {
+      "code": "30",
+      "title": "おでん",
+      "categoryId": 7,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe30/",
+      "ingredients": [
+        "大根",
+        "卵",
+        "こんにゃく",
+        "ちくわ",
+        "さつま揚げ",
+        "昆布",
+        "だし",
+        "しょうゆ",
+        "みりん"
+      ]
+    },
+    {
+      "code": "35",
+      "title": "ぶり大根",
+      "categoryId": 3,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe35/",
+      "ingredients": [
+        "ぶり",
+        "大根",
+        "しょうが",
+        "酒",
+        "みりん",
+        "しょうゆ",
+        "砂糖"
+      ]
+    },
+    {
+      "code": "40",
+      "title": "手羽元の甘辛煮",
+      "categoryId": 2,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe40/",
+      "ingredients": [
+        "手羽元",
+        "酒",
+        "みりん",
+        "しょうゆ",
+        "砂糖",
+        "にんにく"
+      ]
+    },
+    {
+      "code": "45",
+      "title": "かぼちゃの煮物",
+      "categoryId": 4,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe45/",
+      "ingredients": [
+        "かぼちゃ",
+        "だし",
+        "しょうゆ",
+        "みりん",
+        "砂糖"
+      ]
+    },
+    {
+      "code": "50",
+      "title": "ミネストローネ",
+      "categoryId": 6,
+      "sourceUrl": "https://www.irisohyama.co.jp/kitchen/cooker/recipe/3l/recipe50/",
+      "ingredients": [
+        "ベーコン",
+        "玉ねぎ",
+        "にんじん",
+        "セロリ",
+        "キャベツ",
+        "トマト缶",
+        "コンソメ"
+      ]
+    }
+  ]
+}

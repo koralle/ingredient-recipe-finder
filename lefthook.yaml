@@ -1,2 +1,10 @@
 pre-commit:
   parallel: true
+
+  jobs:
+    - name: TypeSpec
+      glob:
+        - "tsp/**/*.tsp"
+      run: |
+        bun tsp format {staged_files}
+      stage_fixed: true

@@ -6,12 +6,14 @@
     ".": "./generated/index.ts"
   },
   "scripts": {
-    "build": "tsp compile tsp/main.tsp"
+    "dev": "tsp compile ./tsp",
+    "watch": "tsp compile ./tsp --watch",
+    "format": "tsp format ./tsp"
   },
   "devDependencies": {
-    "@typespec/compiler": "^0.65.0",
-    "@typespec/http": "^0.65.0",
-    "@typespec/openapi3": "^0.65.0",
+    "@typespec/compiler": "1.7.1",
+    "@typespec/http": "1.7.0",
+    "@typespec/openapi3": "1.7.0",
     "@typescript/native-preview": "catalog:"
   }
 }

@@ -1,17 +1,14 @@
 import { Hono } from "hono";
-import { recipesRouter } from "./routes/recipes";
-import { ingredientsRouter } from "./routes/ingredients";
-import { categoriesRouter } from "./routes/categories";
+import { categoriesApp } from "./routes/categories";
+import { ingredientsApp } from "./routes/ingredients";
+import { recipesApp } from "./routes/recipes";
 
-const app = new Hono<{ Bindings: CloudflareBindings }>();
-
-// API routes
-app.route("/api/recipes", recipesRouter);
-app.route("/api/ingredients", ingredientsRouter);
-app.route("/api/categories", categoriesRouter);
-
-// Health check
-app.get("/api/health", (c) => c.json({ status: "ok" }));
+const app = new Hono()
+  .basePath("/api")
+  .get("/health", (c) => c.json({ status: "ok" }))
+  .route("/categories", categoriesApp)
+  .route("/ingredients", ingredientsApp)
+  .route("/recipes", recipesApp);
 
 export default app;
 export { app };

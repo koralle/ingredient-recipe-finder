@@ -8,3 +8,23 @@ pre-commit:
       run: |
         bun tsp format {staged_files}
       stage_fixed: true
+
+    - name: API
+      group:
+        piped: true
+        jobs:
+          - name: Biome
+            glob:
+              # TypeScript
+              - "src/**/*.ts"
+              - "worker-configuration.d.ts"
+
+              # JSON
+              - "package.json"
+              - "tsconfig.json"
+              - "biome.jsonc"
+              - "wrangler.jsonc"
+
+            run:
+              biome check {staged_files} --fix
+            stage_fixed: true

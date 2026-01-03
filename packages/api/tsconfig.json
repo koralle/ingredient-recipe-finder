@@ -1,29 +1,10 @@
 {
+  "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "declaration": true,
-    "declarationMap": true,
-    "paths": {
-      "@recipe-finder/schema": [
-        "../schema/generated/index.ts"
-      ],
-      "@recipe-finder/db": [
-        "../db/src/index.ts"
-      ]
-    }
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler"
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["src/**/*", "worker-configuration.d.ts"],
+  "exclude": ["node_modules"]
 }

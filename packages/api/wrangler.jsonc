@@ -13,7 +13,14 @@
   },
   "observability": {
     "enabled": true
-  }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ingredient-recipe-finder",
+      "database_id": "47e0cc42-680f-4b50-8e56-e8a37cf43b95"
+    }
+  ]
   /**
    * Smart Placement
    * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

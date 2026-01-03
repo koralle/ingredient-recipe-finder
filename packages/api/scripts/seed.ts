@@ -1,6 +1,6 @@
 import Database from "better-sqlite3";
 import { drizzle } from "drizzle-orm/better-sqlite3";
-import { categories, recipes, ingredients, recipeIngredients } from "../src/schema";
+import { categories, recipes, ingredients, recipeIngredients } from "../src/db/schema";
 import seedData from "../data/recipes.json";
 
 // 食材名の正規化（検索用）

@@ -1,5 +1,5 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
 import { relations } from "drizzle-orm";
+import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
 // ========================================
 // Tables
@@ -57,16 +57,13 @@ export const ingredientsRelations = relations(ingredients, ({ many }) => ({
   recipeIngredients: many(recipeIngredients),
 }));
 
-export const recipeIngredientsRelations = relations(
-  recipeIngredients,
-  ({ one }) => ({
-    recipe: one(recipes, {
-      fields: [recipeIngredients.recipeId],
-      references: [recipes.id],
-    }),
-    ingredient: one(ingredients, {
-      fields: [recipeIngredients.ingredientId],
-      references: [ingredients.id],
-    }),
-  })
-);
+export const recipeIngredientsRelations = relations(recipeIngredients, ({ one }) => ({
+  recipe: one(recipes, {
+    fields: [recipeIngredients.recipeId],
+    references: [recipes.id],
+  }),
+  ingredient: one(ingredients, {
+    fields: [recipeIngredients.ingredientId],
+    references: [ingredients.id],
+  }),
+}));

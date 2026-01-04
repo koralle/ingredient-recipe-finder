@@ -1,12 +1,13 @@
+import { readdirSync } from "node:fs";
+import { resolve } from "node:path";
 import { defineConfig } from "drizzle-kit";
-import { resolve } from 'node:path'
-import { readdirSync } from 'node:fs'
 
 function getLocalD1DB() {
   try {
     const basePath = resolve(".wrangler/state/v3/d1/miniflare-D1DatabaseObject");
-    const dbFile = readdirSync(basePath, { encoding: "utf-8", recursive: true })
-      .find((f) => f.endsWith(".sqlite"));
+    const dbFile = readdirSync(basePath, { encoding: "utf-8", recursive: true }).find((f) =>
+      f.endsWith(".sqlite"),
+    );
 
     if (!dbFile) {
       throw new Error(`.sqlite file not found in ${basePath}`);
@@ -24,7 +25,6 @@ export default defineConfig({
   out: "./drizzle",
   dialect: "sqlite",
   dbCredentials: {
-    url: getLocalD1DB() ?? ''
-  }
+    url: getLocalD1DB() ?? "",
+  },
 });
-

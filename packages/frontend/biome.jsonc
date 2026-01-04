@@ -10,8 +10,10 @@
     "includes": [
       // TypeScript
       "src/**/*.ts",
+      "src/**/*.tsx",
       "worker-configuration.d.ts",
-
+      "drizzle.config.ts",
+      "drizzle.config.studio.ts",
       // JSON
       "package.json",
       "tsconfig.json",
@@ -39,6 +41,19 @@
     "useEditorconfig": true
   },
   "overrides": [
+    {
+      "includes": ["src/routeTree.gen.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          },
+          "correctness": {
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    },
     {
       "includes": ["worker-configuration.d.ts"],
       "linter": {

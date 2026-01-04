@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
+    "@dotenvx/dotenvx": "^1.51.2",
     "@ingredient-recipe-finder/schema": "workspace:*",
     "@tsconfig/strictest": "^2.0.8",
     "@types/better-sqlite3": "^7.6.12",

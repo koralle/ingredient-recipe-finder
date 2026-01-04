@@ -1,0 +1,62 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.10/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true,
+    "root": "../../"
+  },
+  "files": {
+    "includes": [
+      // TypeScript
+      "src/**/*.ts",
+      "worker-configuration.d.ts",
+      "drizzle.config.ts",
+      "drizzle.config.studio.ts",
+      // JSON
+      "package.json",
+      "tsconfig.json",
+      "biome.jsonc",
+      "wrangler.jsonc"
+    ]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "recommended": true
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "useEditorconfig": true
+  },
+  "overrides": [
+    {
+      "includes": ["worker-configuration.d.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedImports": "off"
+          },
+          "complexity": {
+            "noBannedTypes": "off",
+            "noStaticOnlyClass": "off"
+          },
+          "suspicious": {
+            "noExplicitAny": "off",
+            "noConfusingVoidType": "off"
+          }
+        }
+      }
+    }
+  ]
+}

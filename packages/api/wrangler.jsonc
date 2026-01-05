@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-01-03",
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./public"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ingredient-recipe-finder",
+      "database_id": "47e0cc42-680f-4b50-8e56-e8a37cf43b95",
+      "migrations_dir": "./drizzle"
+    }
+  ]
+}

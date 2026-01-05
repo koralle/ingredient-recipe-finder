@@ -1,2 +1,27 @@
 pre-commit:
   parallel: true
+  jobs:
+    - name: API
+      group:
+        piped: true
+        jobs:
+          - name: Biome
+            root: packages/api
+            glob:
+              - "src/**/*.ts"
+              - "worker-configuration.d.ts"
+
+              - "package.json"
+              - "tsconfig.json"
+              - "biome.jsonc"
+              - "wrangler.jsonc"
+            run: |
+              bun biome check {staged_files} --fix
+            stage_fixed: true
+
+          - name: Typecheck
+            glob:
+              - "src/**/*.ts"
+              - "worker-configuration.d.ts"
+            run: |
+              bun tsgo

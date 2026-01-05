@@ -1,0 +1,42 @@
+name: CI (Backend)
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  biome:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: Setup
+        uses: ./.github/composite-actions/cache-and-install
+
+      - name: Biome
+        working-directory: ./packages/backend
+        shell: bash
+        run: |
+          bun run check:ci
+
+  typecheck:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+
+      - name: Setup
+        uses: ./.github/composite-actions/cache-and-install
+
+      - name: Typecheck
+        working-directory: ./packages/backend
+        shell: bash
+        run: |
+          bun run typecheck

@@ -1,0 +1,19 @@
+name: Cache and Install
+description: Cache pnpm store and install dependencies
+
+runs:
+  using: composite
+
+  steps:
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@735343b667d3e6f658f44d0eca948eb6282f2b76 # v2.0.2
+
+    - name: Install safe-chain
+      shell: bash
+      run: |
+        curl -fsSL https://raw.githubusercontent.com/AikidoSec/safe-chain/main/install-scripts/install-safe-chain.sh | sh -s -- --ci
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        bun install --frozen-lockfile
